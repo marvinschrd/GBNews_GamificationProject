@@ -203,6 +203,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: living_room_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 31
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0891fef2232ca74092f3e722337dc51
+      internalID: -1481761941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: living_room_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 48
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b4f96667ec4b34b8c0ed0dbc500ad3
+      internalID: -1729505728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: living_room_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 79
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24f4aabb2513704b9752a9d7018ae8d
+      internalID: 1901327594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: living_room_5
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 32
+        width: 17
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7c1f3d5a9476c499a75e50b6a1377f
+      internalID: -1099047584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: living_room_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c75af82ec79ce4d8e9dd3d02a342ce
+      internalID: -782303313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,6 +321,11 @@ TextureImporter:
     nameFileIdTable:
       living_room_0: -978048043
       living_room_1: -1052420934
+      living_room_2: -1481761941
+      living_room_3: -1729505728
+      living_room_4: 1901327594
+      living_room_5: -1099047584
+      living_room_6: -782303313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -19,13 +19,13 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             var position = cameraTransform.position;
-            position = new Vector3(position.x + 0.1f, position.y,position.z);
+            position = new Vector3(position.x + 0.2f, position.y,position.z);
             cameraTransform.position = position;
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             var position = cameraTransform.position;
-            position = new Vector3(position.x - 0.1f, position.y,position.z);
+            position = new Vector3(position.x - 0.2f, position.y,position.z);
             cameraTransform.position = position;
         }
     }

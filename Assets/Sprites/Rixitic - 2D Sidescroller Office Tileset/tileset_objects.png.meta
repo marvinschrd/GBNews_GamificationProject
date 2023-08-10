@@ -170,7 +170,7 @@ TextureImporter:
         width: 31
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
         width: 47
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,6 +199,69 @@ TextureImporter:
       bones: []
       spriteID: 6ab92305b6c55bc409136839135a7027
       internalID: -2080271700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_objects_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7561d40df3ba6d74792f13c360fe795b
+      internalID: 604752561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_objects_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 51
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b995ce4670a60f54692d41bcba7bf28c
+      internalID: 1795789245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_objects_4
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 34
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a17a8f7551a0045a57b4f0c466a83c
+      internalID: 159965252
       vertices: []
       indices: 
       edges: []
@@ -216,6 +279,9 @@ TextureImporter:
     nameFileIdTable:
       tileset_objects_0: 1906417400
       tileset_objects_1: -2080271700
+      tileset_objects_2: 604752561
+      tileset_objects_3: 1795789245
+      tileset_objects_4: 159965252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
