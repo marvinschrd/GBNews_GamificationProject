@@ -1,13 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 using FixedUpdate = UnityEngine.PlayerLoop.FixedUpdate;
+using Vector3 = UnityEngine.Vector3;
 
 public class CameraMovement : MonoBehaviour
 {
+    private bool moveTotarget = false;
+    private Vector3 targetPosition;
     private Transform cameraTransform;
+
+    [SerializeField] private float movementSPeed = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +36,24 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    public void moveTo(Vector3 position)
+    {
+        targetPosition = position;
+        moveTotarget = true;
+    }
+
+    //Update is called once per frame
     void Update()
     {
-       
+        if (moveTotarget)
+        {
+            Vector3 position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * movementSPeed);
+            transform.position = position;
+            if (Vector3.Distance(transform.position, targetPosition) <= 0.1)
+            {
+                moveTotarget = false;
+            }
+        }
         
     }
 }

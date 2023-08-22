@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label tabindex="-1" text="Objectifs" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px;" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); opacity: 1; display: flex;">
+        <ui:ScrollView />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+        <ui:Toggle label="Toggle" style="flex-direction: row-reverse;" />
+    </ui:VisualElement>
+</ui:UXML>
