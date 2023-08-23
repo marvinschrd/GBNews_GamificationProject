@@ -165,6 +165,7 @@ public class DataManager : MonoBehaviour
         DataSaver.SaveDataToJson(_participantData); // only update and save the objectives stored inside the "objectivesData" list and not the separate  ones
     }
 
+    // Initialize the main menu progressbars
     public void InitializeProgressBars()
     {
         ProgressBarScript [] progressBarScripts = FindObjectsOfType<ProgressBarScript>();

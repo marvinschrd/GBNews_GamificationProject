@@ -49,8 +49,8 @@ public class MainMenuUIScript : MonoBehaviour
         foreach (var progressbar in progressBars)
         {
             ProgressBarScript progressBarScript = progressbar.GetComponent<ProgressBarScript>();
-            progressBarScript.UpdateMaxProgressValue();
-            progressBarScript.UpdateProgressValue();
+            progressBarScript.UpdateMaxProgressValueFromData();
+            //progressBarScript.UpdateProgressValue();
         }
     }
 }

@@ -66,7 +66,7 @@ namespace UIScripts.UITESTS
                     {
                         if (objective.isDone)
                         {
-                            currentProgress++;
+                           // currentProgress++;
                         }
                     }
                 }
@@ -78,7 +78,7 @@ namespace UIScripts.UITESTS
                     {
                         if (objective.isDone)
                         {
-                            currentProgress++;
+                           // currentProgress++;
                         }
                     }
                 }
@@ -90,7 +90,7 @@ namespace UIScripts.UITESTS
                     {
                         if (objective.isDone)
                         {
-                            currentProgress++;
+                           // currentProgress++;
                         }
                     }
                 }
@@ -102,7 +102,7 @@ namespace UIScripts.UITESTS
                     {
                         if (objective.isDone)
                         {
-                            currentProgress++;
+                          //  currentProgress++;
                         }
                     }
                 }
@@ -120,8 +120,12 @@ namespace UIScripts.UITESTS
             CategoryTitleComponent.GetComponent<TextMeshProUGUI>().text = type_.ToString();
         }
 
-        public void UpdateProgressValue()
+        public void UpdateProgressValue(bool addPorgress)
         {
+            currentProgressValue_ += addPorgress ? 1 : -1;
+            CurrentProgressTextComponent.GetComponent<TextMeshProUGUI>().text = currentProgressValue_.ToString();
+            progressBarSlider.value = currentProgressValue_;
+            
             // switch (type_)
             // {
             //     case DataManager.ObjectivesTypes.PITCH:
@@ -179,7 +183,7 @@ namespace UIScripts.UITESTS
             //DataSaver.SaveDataToJson();
         }
 
-        public void UpdateMaxProgressValue()
+        public void UpdateMaxProgressValueFromData()
         {
             maxProgressValue_ = 0;
             switch (type_)
@@ -217,6 +221,13 @@ namespace UIScripts.UITESTS
                 }
                     break;
             }
+        }
+
+       public void UpdateMaxprogressValueFromValue(float value)
+        {
+            maxProgressValue_ = value;
+            MaxProgressTextComponent.GetComponent<TextMeshProUGUI>().text = maxProgressValue_.ToString();
+            progressBarSlider.maxValue = maxProgressValue_;
         }
     }
 }
