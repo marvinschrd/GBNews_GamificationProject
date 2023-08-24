@@ -56,54 +56,54 @@ namespace UIScripts.UITESTS
             float maxProgress = 0;
             float currentProgress = 0;
         
-            switch (type_)
-            {
-                case DataManager.ObjectivesTypes.PITCH:
-                {
-                    foreach (var objective in dataManager.GetPitchObjectives())
-                    {
-                        if (objective.isDone)
-                        {
-                            currentProgress++;
-                        }
-                    }
-                }
-                    break;
-                case DataManager.ObjectivesTypes.STARS:
-                {
-                    foreach (var objective in dataManager.GetStarsObjectives())
-                    {
-                        if (objective.isDone)
-                        {
-                            currentProgress++;
-                        }
-                    }
-                }
-                    break;
-                case DataManager.ObjectivesTypes.LINKEDIN:
-                {
-                    foreach (var objective in dataManager.GetLinkedinObjectives())
-                    {
-                        if (objective.isDone)
-                        {
-                            currentProgress++;
-                        }
-                    }
-                }
-                    break;
-                case DataManager.ObjectivesTypes.CV:
-                {
-                    maxProgress = dataManager.GetPitchObjectives().Count;
-                    foreach (var objective in dataManager.GetCVObjectives())
-                    {
-                        if (objective.isDone)
-                        {
-                            currentProgress++;
-                        }
-                    }
-                }
-                    break;
-            }
+            // switch (type_)
+            // {
+            //     case DataManager.ObjectivesTypes.PITCH:
+            //     {
+            //         foreach (var objective in dataManager.GetPitchObjectives())
+            //         {
+            //             if (objective.isDone)
+            //             {
+            //                // currentProgress++;
+            //             }
+            //         }
+            //     }
+            //         break;
+            //     case DataManager.ObjectivesTypes.STARS:
+            //     {
+            //         foreach (var objective in dataManager.GetStarsObjectives())
+            //         {
+            //             if (objective.isDone)
+            //             {
+            //                 //currentProgress++;
+            //             }
+            //         }
+            //     }
+            //         break;
+            //     case DataManager.ObjectivesTypes.LINKEDIN:
+            //     {
+            //         foreach (var objective in dataManager.GetLinkedinObjectives())
+            //         {
+            //             if (objective.isDone)
+            //             {
+            //                // currentProgress++;
+            //             }
+            //         }
+            //     }
+            //         break;
+            //     case DataManager.ObjectivesTypes.CV:
+            //     {
+            //         maxProgress = dataManager.GetPitchObjectives().Count;
+            //         foreach (var objective in dataManager.GetCVObjectives())
+            //         {
+            //             if (objective.isDone)
+            //             {
+            //                 //currentProgress++;
+            //             }
+            //         }
+            //     }
+            //         break;
+            // }
             
             // update the slider values
            // maxProgressValue_ = maxProgress;

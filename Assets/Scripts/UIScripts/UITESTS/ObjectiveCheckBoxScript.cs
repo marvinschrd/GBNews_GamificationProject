@@ -14,6 +14,11 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
     [SerializeField] private GameObject ObjectiveCheckBoxComponent_;
 
     [SerializeField] GameObject ProgressBarRelatedObject_;
+    
+    //Variable to prevent initial toggle when loading data
+    private bool initialIsDoneState = false;
+
+    private bool firstUpdateChecked = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,12 +39,28 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
         relatedProgressBar.GetComponent<ProgressBarScript>().UpdateMaxprogressValueFromValue(1);
 
         ObjectiverDescriptionComponent_.GetComponent<Text>().text = _objectiveData.Title;
-        ObjectiveCheckBoxComponent_.GetComponent<Toggle>().isOn = _objectiveData.isDone;
+
+        initialIsDoneState = _objectiveData.isDone;
+        
+        
+        ObjectiveCheckBoxComponent_.GetComponent<Toggle>().isOn = initialIsDoneState;
+        firstUpdateChecked = true;
+
     }
 
     public void ToggleObjectiveDoneState()
     {
-        _objectiveData.isDone = !_objectiveData.isDone;
-        ProgressBarRelatedObject_.GetComponent<ProgressBarScript>().UpdateProgressValue(_objectiveData.isDone);
+               Debug.Log("should update is done");
+           if (!firstUpdateChecked)
+           {
+            ProgressBarRelatedObject_.GetComponent<ProgressBarScript>().UpdateProgressValue(true);
+           }
+           else
+           {
+             _objectiveData.isDone = !_objectiveData.isDone;
+             ProgressBarRelatedObject_.GetComponent<ProgressBarScript>().UpdateProgressValue(_objectiveData.isDone);
+           }
+           
     }
+    
 }
