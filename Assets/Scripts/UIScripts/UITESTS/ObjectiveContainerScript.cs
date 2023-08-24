@@ -67,7 +67,7 @@ public class ObjectiveContainerScript : MonoBehaviour
         Debug.Log("instatiate widget");
         int nbOfWidget = objectivesDataList_.Count;
         
-        ObjectiveProgressBar_.GetComponent<ProgressBarScript>().UpdateMaxprogressValueFromValue(nbOfWidget);
+        //ObjectiveProgressBar_.GetComponent<ProgressBarScript>().UpdateMaxprogressValueFromValue(nbOfWidget);
         
         // Instantiate and initialize each objective widget with the data
         foreach (var objectiveData in objectivesDataList_)
@@ -78,8 +78,13 @@ public class ObjectiveContainerScript : MonoBehaviour
         }
     }
 
-    public void RegisterNewObjective()
+    public void RegisterNewObjective(DataManager.ObjectiveData objective)
     {
+        objectivesDataList_ .Add(objective);
         
+        //add into the scrollview
+        GameObject objectiveWidget = Instantiate(objectiveWidgetPrefab_);
+        objectiveWidget.transform.SetParent(scrollViewContentComponent_.transform, false);
+        objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().InitializeObjective(objective,ObjectiveProgressBar_);
     }
 }

@@ -31,6 +31,7 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
         DataManager dataManager = FindObjectOfType<DataManager>();
         _objectiveData = objectiveData;
         ProgressBarRelatedObject_ = relatedProgressBar;
+        relatedProgressBar.GetComponent<ProgressBarScript>().UpdateMaxprogressValueFromValue(1);
 
         ObjectiverDescriptionComponent_.GetComponent<Text>().text = _objectiveData.Title;
         ObjectiveCheckBoxComponent_.GetComponent<Toggle>().isOn = _objectiveData.isDone;

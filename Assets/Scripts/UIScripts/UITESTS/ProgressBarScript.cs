@@ -60,37 +60,33 @@ namespace UIScripts.UITESTS
             {
                 case DataManager.ObjectivesTypes.PITCH:
                 {
-                    maxProgress = dataManager.GetPitchObjectives().Count;
-                    
                     foreach (var objective in dataManager.GetPitchObjectives())
                     {
                         if (objective.isDone)
                         {
-                           // currentProgress++;
+                            currentProgress++;
                         }
                     }
                 }
                     break;
                 case DataManager.ObjectivesTypes.STARS:
                 {
-                    maxProgress = dataManager.GetPitchObjectives().Count;
                     foreach (var objective in dataManager.GetStarsObjectives())
                     {
                         if (objective.isDone)
                         {
-                           // currentProgress++;
+                            currentProgress++;
                         }
                     }
                 }
                     break;
                 case DataManager.ObjectivesTypes.LINKEDIN:
                 {
-                    maxProgress = dataManager.GetPitchObjectives().Count;
                     foreach (var objective in dataManager.GetLinkedinObjectives())
                     {
                         if (objective.isDone)
                         {
-                           // currentProgress++;
+                            currentProgress++;
                         }
                     }
                 }
@@ -102,7 +98,7 @@ namespace UIScripts.UITESTS
                     {
                         if (objective.isDone)
                         {
-                          //  currentProgress++;
+                            currentProgress++;
                         }
                     }
                 }
@@ -110,7 +106,7 @@ namespace UIScripts.UITESTS
             }
             
             // update the slider values
-            maxProgressValue_ = maxProgress;
+           // maxProgressValue_ = maxProgress;
             currentProgressValue_ = currentProgress;
             progressBarSlider.maxValue = maxProgressValue_;
             progressBarSlider.value = currentProgressValue_;
@@ -120,22 +116,23 @@ namespace UIScripts.UITESTS
             CategoryTitleComponent.GetComponent<TextMeshProUGUI>().text = type_.ToString();
         }
 
-        public void UpdateProgressValue(bool addPorgress)
+        public void UpdateProgressValue(bool addProgress)
         {
-            currentProgressValue_ += addPorgress ? 1 : -1;
+            currentProgressValue_ += addProgress ? 1 : -1;
             CurrentProgressTextComponent.GetComponent<TextMeshProUGUI>().text = currentProgressValue_.ToString();
             progressBarSlider.value = currentProgressValue_;
-            
+        }
+
+        public void UpdateMaxProgressValueFromData()
+        {
+            // maxProgressValue_ = 0;
             // switch (type_)
             // {
             //     case DataManager.ObjectivesTypes.PITCH:
             //     {
             //         foreach (var objective in dataManager.GetPitchObjectives())
             //         {
-            //             if (objective.isDone)
-            //             {
-            //                 currentProgress++;
-            //             }
+            //             maxProgressValue_++;
             //         }
             //     }
             //         break;
@@ -143,10 +140,7 @@ namespace UIScripts.UITESTS
             //     {
             //         foreach (var objective in dataManager.GetStarsObjectives())
             //         {
-            //             if (objective.isDone)
-            //             {
-            //                 currentProgress++;
-            //             }
+            //             maxProgressValue_++;
             //         }
             //     }
             //         break;
@@ -154,10 +148,7 @@ namespace UIScripts.UITESTS
             //     {
             //         foreach (var objective in dataManager.GetLinkedinObjectives())
             //         {
-            //             if (objective.isDone)
-            //             {
-            //                 currentProgress++;
-            //             }
+            //             maxProgressValue_++;
             //         }
             //     }
             //         break;
@@ -165,67 +156,16 @@ namespace UIScripts.UITESTS
             //     {
             //         foreach (var objective in dataManager.GetCVObjectives())
             //         {
-            //             if (objective.isDone)
-            //             {
-            //                 currentProgress++;
-            //             }
+            //             maxProgressValue_++;
             //         }
             //     }
             //         break;
             // }
-            //
-            //
-            // currentProgressValue_ += progressValue;
-            // currentProgressValue_ = currentProgressValue_ >= maxProgressValue_ ? maxProgressValue_ : currentProgressValue_;
-            // progressBarSlider.value = currentProgressValue_;
-        
-            // register the value change in data
-            //DataSaver.SaveDataToJson();
-        }
-
-        public void UpdateMaxProgressValueFromData()
-        {
-            maxProgressValue_ = 0;
-            switch (type_)
-            {
-                case DataManager.ObjectivesTypes.PITCH:
-                {
-                    foreach (var objective in dataManager.GetPitchObjectives())
-                    {
-                        maxProgressValue_++;
-                    }
-                }
-                    break;
-                case DataManager.ObjectivesTypes.STARS:
-                {
-                    foreach (var objective in dataManager.GetStarsObjectives())
-                    {
-                        maxProgressValue_++;
-                    }
-                }
-                    break;
-                case DataManager.ObjectivesTypes.LINKEDIN:
-                {
-                    foreach (var objective in dataManager.GetLinkedinObjectives())
-                    {
-                        maxProgressValue_++;
-                    }
-                }
-                    break;
-                case DataManager.ObjectivesTypes.CV:
-                {
-                    foreach (var objective in dataManager.GetCVObjectives())
-                    {
-                        maxProgressValue_++;
-                    }
-                }
-                    break;
-            }
         }
 
        public void UpdateMaxprogressValueFromValue(float value)
         {
-            maxProgressValue_ = value;
+            maxProgressValue_ ++;
             MaxProgressTextComponent.GetComponent<TextMeshProUGUI>().text = maxProgressValue_.ToString();
             progressBarSlider.maxValue = maxProgressValue_;
         }
