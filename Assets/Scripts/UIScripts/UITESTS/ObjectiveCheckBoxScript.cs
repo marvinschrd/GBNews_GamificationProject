@@ -59,8 +59,30 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
            {
              _objectiveData.isDone = !_objectiveData.isDone;
              ProgressBarRelatedObject_.GetComponent<ProgressBarScript>().UpdateProgressValue(_objectiveData.isDone);
+             
+             DataManager dataManager = FindObjectOfType<DataManager>();
+             // Get the objectives list
+             List<DataManager.ObjectiveData> tempList = dataManager.GetAllObjectives();
+          
+             // find the object to modify in the list
+             for (int i = 0; i < tempList.Count; ++i)
+             {
+                 if (tempList[i].Title == _objectiveData.Title)
+                 {
+                     tempList.RemoveAt(i);
+                     DataManager.ObjectiveData tempData = _objectiveData;
+                     tempList.Insert(i, tempData);
+                 }
+             }
+             dataManager.SetParticipantObjectives(tempList);
+             dataManager.SaveParticipantData();
            }
            
+        
+          
+          
+          // DataManager.ObjectiveData objective = tempList.Find((objectiveData) => _objectiveData.Title == objectiveData.Title);
+          // tempList.
     }
     
 }
