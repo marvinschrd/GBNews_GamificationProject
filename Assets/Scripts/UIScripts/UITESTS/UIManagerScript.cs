@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,13 @@ using UnityEngine.Rendering;
 
 public class UIManagerScript : MonoBehaviour
 {
+    [System.Serializable]
+   public struct UIPanelInfo
+    {
+        public PanelsOptions type;
+        public bool isEnabled;
+    }
+    
     public enum OptionsMenu
     {
         MAINMENU,
@@ -12,7 +20,19 @@ public class UIManagerScript : MonoBehaviour
         STARS,
         LINKEDIN
     }
+
+    [Serializable]
+    public enum PanelsOptions
+    {
+        MAIN_MENU,
+        PITCH_UI,
+        STARS_UI,
+        LINKEDIN_UI,
+        CV_UI,
+        NEW_OBJECTIVE_PANEL,
+    }
     private OptionsMenu initialMenu = OptionsMenu.MAINMENU;
+    private PanelsOptions InitialPanel = PanelsOptions.MAIN_MENU;
     
     //CameraPositions
     [SerializeField] private Transform MainMenuPosition;
@@ -24,7 +44,11 @@ public class UIManagerScript : MonoBehaviour
     
     //Menus reference to all the different canvas
     [SerializeField] private GameObject MainOptionsPanel;
-   
+    [SerializeField] private GameObject NewObjectiveEditPanel_;
+    
+    
+    //List of panels by panelsBehaviorScript
+    [SerializeField] private List<PanelBehaviorScript> panelsList_;
 
     private CameraMovement cameramovementScript;
 
@@ -94,6 +118,26 @@ public class UIManagerScript : MonoBehaviour
                 // nothing
             }
                 break;
+        }
+    }
+
+    public void ToggleUIPanel(int panelTypeIndex)
+    {
+        foreach (var panel in panelsList_)
+        {
+           var panelInfo = panel.GetPanelInfos();
+
+           if ((PanelsOptions)panelTypeIndex == panelInfo.type)
+           {
+               if (panelInfo.isEnabled)
+               {
+                   panel.DisablePanel();
+               }
+               else
+               {
+                   panel.EnablePanel();
+               }
+           }
         }
     }
 }

@@ -39,17 +39,6 @@ public class ObjectiveContainerScript : MonoBehaviour
     // Populate and initialize the objective list from the selected and given objective datas (objective type)
     public void InitializeObjectives()
     {
-        // foreach (var objectiveData in objectiveDatas)
-        // {
-        //     GameObject objectiveWidget = Instantiate(objectiveWidgetPrefab_);
-        //     objectiveWidget.transform.SetParent(scrollViewComponent_.transform);
-        //     
-        //     //Initialize objective Data
-        //     objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().InitializeObjective(objectiveData);
-        //     
-        // }
-        
-        
         // Get correct objectives from the loaded data
         switch (type_)
         {
@@ -79,19 +68,7 @@ public class ObjectiveContainerScript : MonoBehaviour
         int nbOfWidget = objectivesDataList_.Count;
         
         ObjectiveProgressBar_.GetComponent<ProgressBarScript>().UpdateMaxprogressValueFromValue(nbOfWidget);
-
-        // for (int i = 0; i <= nbOfWidget; ++i)
-        // {
-        //     // mockup objective data
-        //     DataManager.ObjectiveData mockupData = new DataManager.ObjectiveData();
-        //     mockupData.isDone = false;
-        //     mockupData.Description = "write your star in english hajshdkjahdkjahdkjahskdjh";
-        //     
-        //     GameObject objectiveWidget = Instantiate(objectiveWidgetPrefab_);
-        //     objectiveWidget.transform.SetParent(scrollViewContentComponent_.transform, false);
-        //     objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().InitializeObjective(mockupData,ObjectiveProgressBar_);
-        // }
-
+        
         // Instantiate and initialize each objective widget with the data
         foreach (var objectiveData in objectivesDataList_)
         {
@@ -99,5 +76,10 @@ public class ObjectiveContainerScript : MonoBehaviour
             objectiveWidget.transform.SetParent(scrollViewContentComponent_.transform, false);
             objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().InitializeObjective(objectiveData,ObjectiveProgressBar_);
         }
+    }
+
+    public void RegisterNewObjective()
+    {
+        
     }
 }
