@@ -10,7 +10,7 @@ public class ObjectiveContainerScript : MonoBehaviour
     private List<ObjectiveCheckBoxScript> objectivesWidgetScripts;
 
     [SerializeField] private GameObject objectiveWidgetPrefab_;
-    private List<GameObject> ObjectivesWidgets;
+    private List<GameObject> ObjectivesWidgets = new List<GameObject>();
 
    [SerializeField] private DataManager.ObjectivesTypes type_ = DataManager.ObjectivesTypes.PITCH;
 
@@ -73,6 +73,7 @@ public class ObjectiveContainerScript : MonoBehaviour
         foreach (var objectiveData in objectivesDataList_)
         {
             GameObject objectiveWidget = Instantiate(objectiveWidgetPrefab_);
+            ObjectivesWidgets.Add(objectiveWidget);
             objectiveWidget.transform.SetParent(scrollViewContentComponent_.transform, false);
             objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().InitializeObjective(objectiveData,ObjectiveProgressBar_);
         }
@@ -80,11 +81,35 @@ public class ObjectiveContainerScript : MonoBehaviour
 
     public void RegisterNewObjective(DataManager.ObjectiveData objective)
     {
-        objectivesDataList_ .Add(objective);
+        objectivesDataList_.Add(objective);
         
         //add into the scrollview
         GameObject objectiveWidget = Instantiate(objectiveWidgetPrefab_);
+        ObjectivesWidgets.Add(objectiveWidget);
         objectiveWidget.transform.SetParent(scrollViewContentComponent_.transform, false);
         objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().InitializeObjective(objective,ObjectiveProgressBar_);
+    }
+
+    public void DeleteObjective(DataManager.ObjectiveData objectiveData)
+    {
+        GameObject objectiveToDelete = new GameObject();
+        //Remove from scrollview
+        foreach (GameObject objectiveWidget in ObjectivesWidgets)
+        {
+            if (objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().GetData().Title == objectiveData.Title)
+            {
+                //Destroy the gameobject
+                objectiveToDelete = objectiveWidget;
+                Destroy(objectiveWidget);
+            }
+        }
+
+        if (objectiveToDelete != null)
+        {
+            ObjectivesWidgets.Remove(objectiveToDelete);
+        }
+        objectivesDataList_.Remove(objectiveData);
+        
+        //TODO do something to tell the progressbar to update its objective/maxobjective state
     }
 }

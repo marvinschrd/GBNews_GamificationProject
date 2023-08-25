@@ -12,7 +12,7 @@ namespace UIScripts.UITESTS
 
         private float currentProgressValue_;
 
-        private bool progressFull = false;
+        //private bool progressFull = false;
 
         [SerializeField] private DataManager.ObjectivesTypes type_;
         private DataManager dataManager;
@@ -53,7 +53,7 @@ namespace UIScripts.UITESTS
             progressBarSlider = GetComponentInChildren<Slider>();
             
             
-            float maxProgress = 0;
+            //float maxProgress = 0;
             float currentProgress = 0;
         
             // switch (type_)

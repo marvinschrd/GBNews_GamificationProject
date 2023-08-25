@@ -19,17 +19,6 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
     private bool initialIsDoneState = false;
 
     private bool firstUpdateChecked = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void InitializeObjective(DataManager.ObjectiveData objectiveData, GameObject relatedProgressBar)
     {
@@ -46,6 +35,11 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
         ObjectiveCheckBoxComponent_.GetComponent<Toggle>().isOn = initialIsDoneState;
         firstUpdateChecked = true;
 
+    }
+
+    public DataManager.ObjectiveData GetData()
+    {
+        return _objectiveData;
     }
 
     public void ToggleObjectiveDoneState()
@@ -77,12 +71,19 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
              dataManager.SetParticipantObjectives(tempList);
              dataManager.SaveParticipantData();
            }
-           
+    }
+
+    public void OnInfoButtonPressed()
+    {
+        //Initialize the detail panel according to this objective data
+        ObjectiveDetailPanelScript objectiveInfoWidget = FindObjectOfType<ObjectiveDetailPanelScript>(true);
+        objectiveInfoWidget.InitializePanel(_objectiveData);
         
-          
-          
-          // DataManager.ObjectiveData objective = tempList.Find((objectiveData) => _objectiveData.Title == objectiveData.Title);
-          // tempList.
+        // Tell the UI manager to toggle the detail panel
+        UIManagerScript uiManager = FindObjectOfType<UIManagerScript>();
+        uiManager.ToggleUIPanel((int)UIManagerScript.PanelsOptions.OBJECTIVE_DETAIL_PANEL);
+        
+        Debug.Log("info button pressed");
     }
     
 }

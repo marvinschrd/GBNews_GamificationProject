@@ -27,7 +27,7 @@ public  class DataLoader
     public static DataManager.ParticipantData loadJsonData()
     {
         DataManager.ParticipantData data = new DataManager.ParticipantData();
-        string folder = "Resources";
+      //  string folder = "Resources";
        // var jsonFile = Resources.Load<TextAsset>(folder + path);
        
         var jsonFilepath = Application.persistentDataPath + "/ParticipantData.json";

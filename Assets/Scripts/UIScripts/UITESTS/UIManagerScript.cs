@@ -30,6 +30,7 @@ public class UIManagerScript : MonoBehaviour
         LINKEDIN_UI,
         CV_UI,
         NEW_OBJECTIVE_PANEL,
+        OBJECTIVE_DETAIL_PANEL
     }
     private OptionsMenu initialMenu = OptionsMenu.MAINMENU;
     private PanelsOptions InitialPanel = PanelsOptions.MAIN_MENU;
