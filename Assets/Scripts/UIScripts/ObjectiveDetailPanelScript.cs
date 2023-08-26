@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,15 +15,54 @@ public class ObjectiveDetailPanelScript : MonoBehaviour
     private DataManager dataManager_;
 
     private DataManager.ObjectiveData relatedObjective_;
+    
+    //For debug
+    [SerializeField] private TextMeshProUGUI Title_;
+    [SerializeField] private TextMeshProUGUI Description_;
+
+    private void Awake()
+    {
+        ObjectiveTitle_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+            .Find(textUI => textUI.name == "ObjectiveTitle");
+        ObjectiveDescription_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+            .Find(textUI => textUI.name == "ObjectiveDescription");
+
+        ObjectiveTitle_ = Title_;
+        ObjectiveDescription_ = Description_;
+        
+        if (ObjectiveTitle_ != null)
+        {
+            Debug.Log("Found title");
+        }
+
+        if (ObjectiveDescription_ != null)
+        {
+            Debug.Log("Found description");
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         dataManager_ = FindObjectOfType<DataManager>();
         
-        ObjectiveTitle_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
-            .Find(textUI => textUI.name == "ObjectiveTitle");
-        ObjectiveDescription_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
-            .Find(textUI => textUI.name == "ObjectiveDescription");
+        // ObjectiveTitle_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+        //     .Find(textUI => textUI.name == "ObjectiveTitle");
+        // ObjectiveDescription_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+        //     .Find(textUI => textUI.name == "ObjectiveDescription");
+        //
+        // ObjectiveTitle_ = Title_;
+        // ObjectiveDescription_ = Description_;
+        //
+        // if (ObjectiveTitle_ != null)
+        // {
+        //     Debug.Log("Found title");
+        // }
+        //
+        // if (ObjectiveDescription_ != null)
+        // {
+        //     Debug.Log("Found description");
+        // }
     }
 
     // Update is called once per frame

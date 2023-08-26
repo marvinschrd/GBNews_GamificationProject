@@ -165,7 +165,7 @@ namespace UIScripts.UITESTS
 
        public void UpdateMaxprogressValueFromValue(float value)
         {
-            maxProgressValue_ ++;
+            maxProgressValue_ += value;
             MaxProgressTextComponent.GetComponent<TextMeshProUGUI>().text = maxProgressValue_.ToString();
             progressBarSlider.maxValue = maxProgressValue_;
         }

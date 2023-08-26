@@ -111,5 +111,10 @@ public class ObjectiveContainerScript : MonoBehaviour
         objectivesDataList_.Remove(objectiveData);
         
         //TODO do something to tell the progressbar to update its objective/maxobjective state
+
+        ProgressBarScript progressBar = ObjectiveProgressBar_.GetComponent<ProgressBarScript>();
+        progressBar.UpdateProgressValue(false);
+        progressBar.UpdateMaxprogressValueFromValue(-1);
+
     }
 }
