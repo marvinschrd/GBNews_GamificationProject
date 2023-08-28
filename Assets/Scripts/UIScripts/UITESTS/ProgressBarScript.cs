@@ -19,6 +19,8 @@ namespace UIScripts.UITESTS
     
         //Texts
         private string category;
+
+        [SerializeField] private bool InitializeSelf = false;
         
         
         // widget components
@@ -32,18 +34,84 @@ namespace UIScripts.UITESTS
         private void OnEnable()
         {
             progressBarSlider = GetComponentInChildren<Slider>();
-            //progressBarSlider.highValue = maxProgressValue_;
         }
 
         void Start()
         {
             dataManager = FindObjectOfType<DataManager>();
+            if (InitializeSelf)
+            {
+                SelfInitialize();
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        void SelfInitialize()
         {
-        
+            dataManager = FindObjectOfType<DataManager>();
+            progressBarSlider = GetComponentInChildren<Slider>();
+            
+            float currentProgress = 0;
+            float maxProgress = 0;
+            switch (type_)
+            {
+                case DataManager.ObjectivesTypes.PITCH:
+                {
+                    foreach (var objective in dataManager.GetPitchObjectives())
+                    {
+                        maxProgress++;
+                        if (objective.isDone)
+                        {
+                            currentProgress++;
+                        }
+                    }
+                }
+                    break;
+                case DataManager.ObjectivesTypes.STARS:
+                {
+                    foreach (var objective in dataManager.GetStarsObjectives())
+                    {
+                        maxProgress++;
+                        if (objective.isDone)
+                        {
+                            currentProgress++;
+                        }
+                    }
+                }
+                    break;
+                case DataManager.ObjectivesTypes.LINKEDIN:
+                {
+                    foreach (var objective in dataManager.GetLinkedinObjectives())
+                    {
+                        maxProgress++;
+                        if (objective.isDone)
+                        {
+                            currentProgress++;
+                        }
+                    }
+                }
+                    break;
+                case DataManager.ObjectivesTypes.CV:
+                {
+                    foreach (var objective in dataManager.GetCVObjectives())
+                    {
+                        maxProgress++;
+                        if (objective.isDone)
+                        {
+                            currentProgress++;
+                        }
+                    }
+                }
+                    break;
+            }
+            
+            currentProgressValue_ = currentProgress;
+            maxProgressValue_ = maxProgress;
+            progressBarSlider.maxValue = maxProgressValue_;
+            progressBarSlider.value = currentProgressValue_;
+
+            CurrentProgressTextComponent.GetComponent<TextMeshProUGUI>().text = currentProgressValue_.ToString();
+            MaxProgressTextComponent.GetComponent<TextMeshProUGUI>().text = maxProgressValue_.ToString();
+            CategoryTitleComponent.GetComponent<TextMeshProUGUI>().text = type_.ToString();
         }
 
        public void InitializeProgressBar()
@@ -118,6 +186,7 @@ namespace UIScripts.UITESTS
 
         public void UpdateProgressValue(bool addProgress)
         {
+            Debug.Log("updated progress bar current progress");
             currentProgressValue_ += addProgress ? 1 : -1;
             CurrentProgressTextComponent.GetComponent<TextMeshProUGUI>().text = currentProgressValue_.ToString();
             progressBarSlider.value = currentProgressValue_;

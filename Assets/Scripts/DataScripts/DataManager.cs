@@ -17,7 +17,7 @@ public class DataManager : MonoBehaviour
             ParseObjectivesData();
           // Debug.Log(_participantData.ObjectivesData[0].ToString());
           
-          InitializeProgressBars();
+          //InitializeProgressBars();
         }
     }
 
@@ -119,21 +119,25 @@ public class DataManager : MonoBehaviour
                 case ObjectivesTypes.PITCH:
                 {
                     PitchObjectives.Add(objectiveData);
+                    Debug.Log("Pitch objectives nb = " + PitchObjectives.Count);
                 }
                     break;
                 case ObjectivesTypes.STARS:
                 {
                     StarsObjectives.Add(objectiveData);
+                    Debug.Log("stars objectives nb = " + PitchObjectives.Count);
                 }
                     break;
                 case ObjectivesTypes.CV:
                 {
                     CVObjectives.Add(objectiveData);
+                    Debug.Log("cv objectives nb = " + PitchObjectives.Count);
                 }
                     break;
                 case ObjectivesTypes.LINKEDIN:
                 {
                     LinkedinObjectives.Add(objectiveData);
+                    Debug.Log("Linkedin objectives nb = " + PitchObjectives.Count);
                 }
                     break;
             }

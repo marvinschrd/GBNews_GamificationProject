@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class ObjectiveDetailPanelScript : MonoBehaviour
 {
-    private TextMeshProUGUI ObjectiveTitle_;
-    private TextMeshProUGUI ObjectiveDescription_;
+    // private TextMeshProUGUI ObjectiveTitle_;
+    // private TextMeshProUGUI ObjectiveDescription_;
 
     [SerializeField] private ObjectiveContainerScript objectiveContainer_;
     
@@ -22,23 +22,46 @@ public class ObjectiveDetailPanelScript : MonoBehaviour
 
     private void Awake()
     {
-        ObjectiveTitle_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
-            .Find(textUI => textUI.name == "ObjectiveTitle");
-        ObjectiveDescription_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
-            .Find(textUI => textUI.name == "ObjectiveDescription");
+        // ObjectiveTitle_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+        //     .Find(textUI => textUI.name == "ObjectiveTitle");
+        // ObjectiveDescription_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+        //     .Find(textUI => textUI.name == "ObjectiveDescription");
+        //
+        // ObjectiveTitle_ = Title_;
+        // ObjectiveDescription_ = Description_;
+        //
+        // if (ObjectiveTitle_ != null)
+        // {
+        //     Debug.Log("Found title");
+        // }
+        //
+        // if (ObjectiveDescription_ != null)
+        // {
+        //     Debug.Log("Found description");
+        // }
+    }
 
-        ObjectiveTitle_ = Title_;
-        ObjectiveDescription_ = Description_;
+    private void OnEnable()
+    {
         
-        if (ObjectiveTitle_ != null)
-        {
-            Debug.Log("Found title");
-        }
-
-        if (ObjectiveDescription_ != null)
-        {
-            Debug.Log("Found description");
-        }
+        // Debug.Log("looking for title and description component");
+        // ObjectiveTitle_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+        //     .Find(textUI => textUI.name == "ObjectiveTitle");
+        // ObjectiveDescription_ = GetComponentsInChildren<TextMeshProUGUI>().ToList()
+        //     .Find(textUI => textUI.name == "ObjectiveDescription");
+        //
+        // ObjectiveTitle_ = Title_;
+        // ObjectiveDescription_ = Description_;
+        //
+        // if (ObjectiveTitle_ != null)
+        // {
+        //     Debug.Log("Found title");
+        // }
+        //
+        // if (ObjectiveDescription_ != null)
+        // {
+        //     Debug.Log("Found description");
+        // }
     }
 
     // Start is called before the first frame update
@@ -65,16 +88,15 @@ public class ObjectiveDetailPanelScript : MonoBehaviour
         // }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void InitializePanel(DataManager.ObjectiveData objectiveData)
     {
-        ObjectiveTitle_.text = objectiveData.Title;
-        ObjectiveDescription_.text = objectiveData.Description;
+        
+        Debug.Log("inititlize detail panel");
+        
+        Title_.text = objectiveData.Title;
+        Description_.text = objectiveData.Description;
+        // ObjectiveTitle_.text = objectiveData.Title;
+        // ObjectiveDescription_.text = objectiveData.Description;
 
         relatedObjective_ = objectiveData;
     }

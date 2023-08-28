@@ -44,6 +44,7 @@ public class ObjectiveContainerScript : MonoBehaviour
     // Populate and initialize the objective list from the selected and given objective datas (objective type)
     public void InitializeObjectives()
     {
+        ObjectiveProgressBar_.GetComponent<ProgressBarScript>().InitializeProgressBar();
         // Get correct objectives from the loaded data
         switch (type_)
         {

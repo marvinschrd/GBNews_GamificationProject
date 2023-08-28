@@ -26,8 +26,8 @@ public class UIManagerScript : MonoBehaviour
     public enum PanelsOptions
     {
         MAIN_MENU,
-        PITCH_UI,
         STARS_UI,
+        PITCH_UI,
         LINKEDIN_UI,
         CV_UI,
         NEW_OBJECTIVE_PANEL,
@@ -94,24 +94,25 @@ public class UIManagerScript : MonoBehaviour
                 {
                     Debug.Log("Pitch target");
                     cameramovementScript.moveTo(PitchMenuPosition.position);
-                    TriggerMainOptionPanel(false);
-                    ToggleUIPanel(0);
+                    
                     
                 }
             }
                 break;
             case OptionsMenu.STARS:
             {
+                Debug.Log("Stars target");
                 cameramovementScript.moveTo(StarsMenuPosition.position);
-                TriggerMainOptionPanel(false);
+                ToggleUIPanel((int)PanelsOptions.STARS_UI);
+                
                 ToggleUIPanel(0);
             }
                 break;
             case OptionsMenu.LINKEDIN:
             {
-                //cameramovementScript.moveTo(li.position);
-                TriggerMainOptionPanel(false);
-                ToggleUIPanel(0);
+                Debug.Log("Linkedin target");
+                // cameramovementScript.moveTo(lin.position);
+                //ToggleUIPanel(0);
             }
                 break;
             case OptionsMenu.MAINMENU:
