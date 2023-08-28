@@ -18,7 +18,8 @@ public class UIManagerScript : MonoBehaviour
         MAINMENU,
         PITCH,
         STARS,
-        LINKEDIN
+        LINKEDIN,
+        CV
     }
 
     [Serializable]
@@ -30,9 +31,10 @@ public class UIManagerScript : MonoBehaviour
         LINKEDIN_UI,
         CV_UI,
         NEW_OBJECTIVE_PANEL,
-        OBJECTIVE_DETAIL_PANEL
+        OBJECTIVE_DETAIL_PANEL,
+        
     }
-    private OptionsMenu initialMenu = OptionsMenu.MAINMENU;
+    [SerializeField] OptionsMenu initialMenu = OptionsMenu.MAINMENU;
     private PanelsOptions InitialPanel = PanelsOptions.MAIN_MENU;
     
     //CameraPositions
@@ -50,6 +52,7 @@ public class UIManagerScript : MonoBehaviour
     
     //List of panels by panelsBehaviorScript
     [SerializeField] private List<PanelBehaviorScript> panelsList_;
+    private List<PanelBehaviorScript> EnabledPanels_ = new List<PanelBehaviorScript>();
 
     private CameraMovement cameramovementScript;
 
@@ -71,14 +74,14 @@ public class UIManagerScript : MonoBehaviour
 
     void TriggerMainOptionPanel(bool enable)
     {
-        if (enable)
-        {
-            MainOptionsPanel.GetComponent<Animator>().SetBool("IsEnabled", true);
-        }
-        else
-        {
-            MainOptionsPanel.GetComponent<Animator>().SetBool("IsEnabled", false);
-        }
+        // if (enable)
+        // {
+        //     MainOptionsPanel.GetComponent<Animator>().SetBool("IsEnabled", true);
+        // }
+        // else
+        // {
+        //     MainOptionsPanel.GetComponent<Animator>().SetBool("IsEnabled", false);
+        // }
     }
     
     public void SelectMenu(int menuIndex)
@@ -92,6 +95,7 @@ public class UIManagerScript : MonoBehaviour
                     Debug.Log("Pitch target");
                     cameramovementScript.moveTo(PitchMenuPosition.position);
                     TriggerMainOptionPanel(false);
+                    ToggleUIPanel(0);
                     
                 }
             }
@@ -100,18 +104,21 @@ public class UIManagerScript : MonoBehaviour
             {
                 cameramovementScript.moveTo(StarsMenuPosition.position);
                 TriggerMainOptionPanel(false);
+                ToggleUIPanel(0);
             }
                 break;
             case OptionsMenu.LINKEDIN:
             {
                 //cameramovementScript.moveTo(li.position);
                 TriggerMainOptionPanel(false);
+                ToggleUIPanel(0);
             }
                 break;
             case OptionsMenu.MAINMENU:
             {
                 cameramovementScript.moveTo(MainMenuPosition.position);
                 TriggerMainOptionPanel(true);
+                
             }
                 break;
             default:
@@ -132,10 +139,16 @@ public class UIManagerScript : MonoBehaviour
            {
                if (panelInfo.isEnabled)
                {
+
+                   if (EnabledPanels_.Contains(panel))
+                   {
+                       EnabledPanels_.Remove(panel);
+                   }
                    panel.DisablePanel();
                }
                else
                {
+                   EnabledPanels_.Add(panel);
                    panel.EnablePanel();
                }
            }

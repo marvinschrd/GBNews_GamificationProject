@@ -36,6 +36,11 @@ public class ObjectiveContainerScript : MonoBehaviour
         
     }
 
+    public void InitializeContainer(DataManager.ObjectivesTypes type)
+    {
+        type_ = type;
+    }
+
     // Populate and initialize the objective list from the selected and given objective datas (objective type)
     public void InitializeObjectives()
     {

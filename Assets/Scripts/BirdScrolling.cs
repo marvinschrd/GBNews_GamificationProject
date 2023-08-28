@@ -46,7 +46,7 @@ public class BirdScrolling : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                Debug.Log("timer at zero");
+               // Debug.Log("timer at zero");
                 float randYOffset = Random.Range(-2.0f, 3.0f);
                 transform.position = new Vector3(startPosition.position.x, startPosition.position.y + randYOffset,
                     startPosition.position.z);
