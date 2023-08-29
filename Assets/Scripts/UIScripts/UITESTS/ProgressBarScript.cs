@@ -45,7 +45,16 @@ namespace UIScripts.UITESTS
             }
         }
 
-        void SelfInitialize()
+        public void SetProgressType (DataManager.ObjectivesTypes type)
+        {
+            type_ = type;
+        }
+        public DataManager.ObjectivesTypes GetProgressType()
+        {
+            return type_;
+        }
+
+        public void SelfInitialize()
         {
             dataManager = FindObjectOfType<DataManager>();
             progressBarSlider = GetComponentInChildren<Slider>();
@@ -186,7 +195,6 @@ namespace UIScripts.UITESTS
 
         public void UpdateProgressValue(bool addProgress)
         {
-            Debug.Log("updated progress bar current progress");
             currentProgressValue_ += addProgress ? 1 : -1;
             CurrentProgressTextComponent.GetComponent<TextMeshProUGUI>().text = currentProgressValue_.ToString();
             progressBarSlider.value = currentProgressValue_;

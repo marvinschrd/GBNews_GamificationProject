@@ -9,16 +9,7 @@ public class DataManager : MonoBehaviour
 {
     private void Awake()
     {
-        var jsonFilepath = Application.persistentDataPath + "/ParticipantData.json";
-        if (File.Exists(jsonFilepath))
-        {
-            _participantData = DataLoader.loadJsonData();
-            AllObjectives_ = _participantData.ObjectivesData;
-            ParseObjectivesData();
-          // Debug.Log(_participantData.ObjectivesData[0].ToString());
-          
-          //InitializeProgressBars();
-        }
+       ReloadData();
     }
 
     private ParticipantData _participantData;
@@ -109,9 +100,29 @@ public class DataManager : MonoBehaviour
         // }
     }
 
+    public void ReloadData()
+    {
+        var jsonFilepath = Application.persistentDataPath + "/ParticipantData.json";
+        if (File.Exists(jsonFilepath))
+        {
+            _participantData = DataLoader.loadJsonData();
+            AllObjectives_ = _participantData.ObjectivesData;
+            ParseObjectivesData();
+            // Debug.Log(_participantData.ObjectivesData[0].ToString());
+          
+            //InitializeProgressBars();
+        }
+    }
+
     void ParseObjectivesData()
     {
-
+        //Clear before parsing to prevent duplicates when reloading data
+        PitchObjectives.Clear();
+        StarsObjectives.Clear();
+        LinkedinObjectives.Clear();
+        CVObjectives.Clear();
+        
+        
         foreach (var objectiveData in _participantData.ObjectivesData)
         {
             switch (objectiveData.type)
@@ -119,25 +130,25 @@ public class DataManager : MonoBehaviour
                 case ObjectivesTypes.PITCH:
                 {
                     PitchObjectives.Add(objectiveData);
-                    Debug.Log("Pitch objectives nb = " + PitchObjectives.Count);
+                    //Debug.Log("Pitch objectives nb = " + PitchObjectives.Count);
                 }
                     break;
                 case ObjectivesTypes.STARS:
                 {
                     StarsObjectives.Add(objectiveData);
-                    Debug.Log("stars objectives nb = " + PitchObjectives.Count);
+                   // Debug.Log("stars objectives nb = " + PitchObjectives.Count);
                 }
                     break;
                 case ObjectivesTypes.CV:
                 {
                     CVObjectives.Add(objectiveData);
-                    Debug.Log("cv objectives nb = " + PitchObjectives.Count);
+                    //Debug.Log("cv objectives nb = " + PitchObjectives.Count);
                 }
                     break;
                 case ObjectivesTypes.LINKEDIN:
                 {
                     LinkedinObjectives.Add(objectiveData);
-                    Debug.Log("Linkedin objectives nb = " + PitchObjectives.Count);
+                   // Debug.Log("Linkedin objectives nb = " + PitchObjectives.Count);
                 }
                     break;
             }
@@ -146,23 +157,28 @@ public class DataManager : MonoBehaviour
 
     public  List<ObjectiveData> GetPitchObjectives()
     {
+        ReloadData();
         return PitchObjectives;
     }
     public  List<ObjectiveData> GetStarsObjectives()
     {
+        ReloadData();
         return StarsObjectives;
     }
     public  List<ObjectiveData> GetLinkedinObjectives()
     {
+        ReloadData();
         return LinkedinObjectives;
     }
     public  List<ObjectiveData> GetCVObjectives()
     {
+        ReloadData();
         return CVObjectives;
     }
 
     public List<ObjectiveData> GetAllObjectives()
     {
+        ReloadData();
         return AllObjectives_;
     }
 
@@ -188,13 +204,13 @@ public class DataManager : MonoBehaviour
     }
 
     // Initialize the main menu progressbars
-    public void InitializeProgressBars()
-    {
-        ProgressBarScript [] progressBarScripts = FindObjectsOfType<ProgressBarScript>();
-
-        foreach (var progressBar in progressBarScripts)
-        {
-            progressBar.InitializeProgressBar();
-        }
-    }
+    // public void InitializeProgressBars()
+    // {
+    //     ProgressBarScript [] progressBarScripts = FindObjectsOfType<ProgressBarScript>();
+    //
+    //     foreach (var progressBar in progressBarScripts)
+    //     {
+    //         progressBar.InitializeProgressBar();
+    //     }
+    // }
 }

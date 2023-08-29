@@ -15,6 +15,11 @@ public class NewObjectiveWidgetScript : MonoBehaviour
         newObjectiveData.type = defaultObjectivesType_;
     }
 
+    public void SetDefaultType(DataManager.ObjectivesTypes type)
+    {
+        defaultObjectivesType_ = type;
+    }
+
     // Update is called once per frame
     void Update()
     {

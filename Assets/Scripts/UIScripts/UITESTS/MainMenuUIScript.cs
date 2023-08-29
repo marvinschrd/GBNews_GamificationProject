@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UIScripts.UITESTS;
@@ -31,26 +32,18 @@ public class MainMenuUIScript : MonoBehaviour
         
     }
 
-    // void InitializeProgessBars()
-    // {
-    //     // Get scripts
-    //     ProgressBarScript PitchProgressbar = PitchProgressBar.GetComponent<ProgressBarScript>();
-    //     ProgressBarScript StarsProgressbar = StarsProgressBar.GetComponent<ProgressBarScript>();
-    //     ProgressBarScript LinkedinProgressbar = LinkedinProgressBar.GetComponent<ProgressBarScript>();
-    //     ProgressBarScript CvProgressbar = CVProgressBar.GetComponent<ProgressBarScript>();
-    //     
-    //
-    //
-    //
-    // }
+    private void OnEnable()
+    {
+       Debug.Log("main menu enabled !!!!");
+       UpdateProgressBars();
+    }
 
     public void UpdateProgressBars()
     {
         foreach (var progressbar in progressBars)
         {
             ProgressBarScript progressBarScript = progressbar.GetComponent<ProgressBarScript>();
-            progressBarScript.UpdateMaxProgressValueFromData();
-            //progressBarScript.UpdateProgressValue();
+            progressBarScript.SelfInitialize();
         }
     }
 }

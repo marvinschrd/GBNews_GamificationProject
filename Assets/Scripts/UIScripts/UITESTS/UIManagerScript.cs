@@ -30,6 +30,7 @@ public class UIManagerScript : MonoBehaviour
         PITCH_UI,
         LINKEDIN_UI,
         CV_UI,
+        OBJECTIVES_MENU,
         NEW_OBJECTIVE_PANEL,
         OBJECTIVE_DETAIL_PANEL,
         
@@ -46,8 +47,7 @@ public class UIManagerScript : MonoBehaviour
     
     
     //Menus reference to all the different canvas
-    [SerializeField] private GameObject MainOptionsPanel;
-    [SerializeField] private GameObject NewObjectiveEditPanel_;
+    [SerializeField] private ObjectiveMenuScript ObjectiveMenu;
     
     
     //List of panels by panelsBehaviorScript
@@ -63,7 +63,7 @@ public class UIManagerScript : MonoBehaviour
     void Start()
     {
         cameramovementScript = FindObjectOfType<CameraMovement>();
-        SelectMenu((int)initialMenu);
+      //  SelectMenu((int)initialMenu);
     }
 
     // Update is called once per frame
@@ -93,8 +93,11 @@ public class UIManagerScript : MonoBehaviour
                 if (PitchMenuPosition != null)
                 {
                     Debug.Log("Pitch target");
+                    ObjectiveMenu.UpdateUIContainers(DataManager.ObjectivesTypes.PITCH);
                     cameramovementScript.moveTo(PitchMenuPosition.position);
+                    ToggleUIPanel((int)PanelsOptions.STARS_UI);
                     
+                    ToggleUIPanel(0);
                     
                 }
             }
@@ -102,6 +105,7 @@ public class UIManagerScript : MonoBehaviour
             case OptionsMenu.STARS:
             {
                 Debug.Log("Stars target");
+                ObjectiveMenu.UpdateUIContainers(DataManager.ObjectivesTypes.STARS);
                 cameramovementScript.moveTo(StarsMenuPosition.position);
                 ToggleUIPanel((int)PanelsOptions.STARS_UI);
                 
@@ -111,6 +115,7 @@ public class UIManagerScript : MonoBehaviour
             case OptionsMenu.LINKEDIN:
             {
                 Debug.Log("Linkedin target");
+                ObjectiveMenu.UpdateUIContainers(DataManager.ObjectivesTypes.LINKEDIN);
                 // cameramovementScript.moveTo(lin.position);
                 //ToggleUIPanel(0);
             }
@@ -118,8 +123,8 @@ public class UIManagerScript : MonoBehaviour
             case OptionsMenu.MAINMENU:
             {
                 cameramovementScript.moveTo(MainMenuPosition.position);
-                TriggerMainOptionPanel(true);
-                
+                DisablePanels();
+                ToggleUIPanel(0);
             }
                 break;
             default:
@@ -127,6 +132,14 @@ public class UIManagerScript : MonoBehaviour
                 // nothing
             }
                 break;
+        }
+    }
+
+    void DisablePanels()
+    {
+        foreach (var panel in EnabledPanels_)
+        {
+            panel.DisablePanel();
         }
     }
 

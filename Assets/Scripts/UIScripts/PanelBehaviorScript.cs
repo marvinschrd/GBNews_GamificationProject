@@ -20,19 +20,35 @@ public class PanelBehaviorScript : MonoBehaviour
     {
         isEnabled_ = true;
         gameObject.SetActive(true);
-        Debug.Log(gameObject.name + "enabled");
+        Debug.Log(gameObject.name + " enabled");
         // action when enabled
     }
 
     public void DisablePanel()
     {
         isEnabled_ = false;
-        gameObject.SetActive(false);
+        if (GetComponent<Animator>())
+        {
+            Debug.Log("has animator and disable");
+            GetComponent<Animator>().SetTrigger("Disabled");
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
         //actions when disabled
     }
 
     public UIManagerScript.UIPanelInfo GetPanelInfos()
     {
+        panelInfo_.isEnabled = isEnabled_;
+        
         return panelInfo_;
+    }
+
+    public void RemovePanel()
+    {
+       Debug.Log("Remove panel");
+       gameObject.SetActive(false);
     }
 }

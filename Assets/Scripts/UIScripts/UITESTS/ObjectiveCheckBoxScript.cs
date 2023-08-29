@@ -17,7 +17,6 @@ public class ObjectiveCheckBoxScript : MonoBehaviour
     
     //Variable to prevent initial toggle when loading data
     private bool initialIsDoneState = false;
-
     private bool firstUpdateChecked = false;
 
     public void InitializeObjective(DataManager.ObjectiveData objectiveData, GameObject relatedProgressBar)
