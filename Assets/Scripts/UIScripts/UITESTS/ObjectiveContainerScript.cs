@@ -104,6 +104,11 @@ public class ObjectiveContainerScript : MonoBehaviour
         ObjectivesWidgets.Add(objectiveWidget);
         objectiveWidget.transform.SetParent(scrollViewContentComponent_.transform, false);
         objectiveWidget.GetComponent<ObjectiveCheckBoxScript>().InitializeObjective(objective,ObjectiveProgressBar_);
+        
+        ProgressBarScript progressBar = ObjectiveProgressBar_.GetComponent<ProgressBarScript>();
+        progressBar.UpdateProgressValue(true);
+        progressBar.UpdateMaxprogressValueFromValue(1);
+        progressBar.SelfInitialize();
     }
 
     public void DeleteObjective(DataManager.ObjectiveData objectiveData)

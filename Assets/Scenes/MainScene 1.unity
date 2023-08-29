@@ -434,6 +434,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
+      propertyPath: fillSpeed_
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
       propertyPath: fillColor_.b
       value: 0.9339623
       objectReference: {fileID: 0}
@@ -652,6 +656,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1794047124323353142, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
   m_PrefabInstance: {fileID: 62741224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &68946120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245991971382636635, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
+  m_PrefabInstance: {fileID: 811663848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &70169901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,6 +2928,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1130193288}
     m_Modifications:
     - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
+      propertyPath: fillSpeed_
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
       propertyPath: fillColor_.b
       value: 0.9150943
       objectReference: {fileID: 0}
@@ -2928,6 +2947,10 @@ PrefabInstance:
       propertyPath: InitializeSelf
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
+      propertyPath: progressBarSlider
+      value: 
+      objectReference: {fileID: 68946120}
     - target: {fileID: 1794047124323353142, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
       propertyPath: m_Name
       value: StarsBar
@@ -5037,6 +5060,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1412650854069988115, guid: 42251f9bd5aca5c4d81bb8f69c41f486, type: 3}
+      propertyPath: fillSpeed_
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412650854069988115, guid: 42251f9bd5aca5c4d81bb8f69c41f486, type: 3}
       propertyPath: InitializeSelf
       value: 1
       objectReference: {fileID: 0}
@@ -6569,6 +6596,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
+      propertyPath: fillSpeed_
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
       propertyPath: fillColor_.b
       value: 0.1727779
       objectReference: {fileID: 0}
@@ -7557,6 +7588,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3534659013713310710, guid: 8e1670af18e96374abb0d20815e96198, type: 3}
+      propertyPath: fillSpeed_
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3741750899298144757, guid: 8e1670af18e96374abb0d20815e96198, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7763,7 +7798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7844204840707085847, guid: 8e1670af18e96374abb0d20815e96198, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: 0.00024414062
       objectReference: {fileID: 0}
     - target: {fileID: 8324826781395088773, guid: 8e1670af18e96374abb0d20815e96198, type: 3}
       propertyPath: m_Name
@@ -7938,6 +7973,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
       propertyPath: type_
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}
+      propertyPath: fillSpeed_
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1412650854069988115, guid: 818e452a16e82454ba200c0cb77a2138, type: 3}

@@ -1,4 +1,6 @@
+using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,13 +8,12 @@ namespace UIScripts.UITESTS
 {
     public class ProgressBarScript : MonoBehaviour
     {
-        private Slider progressBarSlider;
-        [SerializeField] private Image fillImage_;
+        [SerializeField]private Slider progressBarSlider;
 
         [SerializeField] private float maxProgressValue_;
-        [SerializeField] private Color fillColor_;
 
         private float currentProgressValue_;
+        private float lastProgressValue_ = 0.0f;
 
         //private bool progressFull = false;
 
@@ -29,13 +30,20 @@ namespace UIScripts.UITESTS
         [SerializeField] private GameObject CategoryTitleComponent;
         [SerializeField] private GameObject CurrentProgressTextComponent;
         [SerializeField] private GameObject MaxProgressTextComponent;
-    
-    
+
+
+        private float TargetProgress = 0.0f;
+        [SerializeField] private float fillSpeed_ = 0.5f;
+        
         // Start is called before the first frame update
 
         private void OnEnable()
         {
-            progressBarSlider = GetComponentInChildren<Slider>();
+        }
+
+        private void Awake()
+        {
+            //progressBarSlider = GetComponentInChildren<Slider>();
         }
 
         void Start()
@@ -45,6 +53,19 @@ namespace UIScripts.UITESTS
             {
                 SelfInitialize();
             }
+        }
+
+        private void Update()
+        {
+                progressBarSlider.value = Mathf.Lerp(progressBarSlider.value, TargetProgress, Time.deltaTime * fillSpeed_);
+            // if (progressBarSlider.value < TargetProgress)
+            // {
+            //    // progressBarSlider.value += fillSpeed_ * Time.deltaTime;
+            // }
+            // else if (progressBarSlider.value > TargetProgress)
+            // {
+            //     progressBarSlider.value -= fillSpeed_ * Time.deltaTime;
+            // }
         }
 
         public void SetProgressType (DataManager.ObjectivesTypes type)
@@ -126,15 +147,20 @@ namespace UIScripts.UITESTS
                 }
                     break;
             }
+
             
             currentProgressValue_ = currentProgress;
             maxProgressValue_ = maxProgress;
+            TargetProgress = currentProgressValue_;
+            
             progressBarSlider.maxValue = maxProgressValue_;
             progressBarSlider.value = currentProgressValue_;
 
             CurrentProgressTextComponent.GetComponent<TextMeshProUGUI>().text = currentProgressValue_.ToString();
             MaxProgressTextComponent.GetComponent<TextMeshProUGUI>().text = maxProgressValue_.ToString();
             CategoryTitleComponent.GetComponent<TextMeshProUGUI>().text = type_.ToString();
+
+            lastProgressValue_ = currentProgressValue_;
         }
 
        public void InitializeProgressBar()
@@ -158,49 +184,24 @@ namespace UIScripts.UITESTS
 
         public void UpdateProgressValue(bool addProgress)
         {
-            currentProgressValue_ += addProgress ? 1 : -1;
+            // currentProgressValue_ += addProgress ? 1 : -1;
+
+            if (addProgress)
+            {
+                IncrementProgress(1);
+            }
+            else
+            {
+                IncrementProgress(-1);
+            }
+           
+            
             CurrentProgressTextComponent.GetComponent<TextMeshProUGUI>().text = currentProgressValue_.ToString();
-            progressBarSlider.value = currentProgressValue_;
+            //progressBarSlider.value = currentProgressValue_;
         }
 
         public void UpdateMaxProgressValueFromData()
         {
-            // maxProgressValue_ = 0;
-            // switch (type_)
-            // {
-            //     case DataManager.ObjectivesTypes.PITCH:
-            //     {
-            //         foreach (var objective in dataManager.GetPitchObjectives())
-            //         {
-            //             maxProgressValue_++;
-            //         }
-            //     }
-            //         break;
-            //     case DataManager.ObjectivesTypes.STARS:
-            //     {
-            //         foreach (var objective in dataManager.GetStarsObjectives())
-            //         {
-            //             maxProgressValue_++;
-            //         }
-            //     }
-            //         break;
-            //     case DataManager.ObjectivesTypes.LINKEDIN:
-            //     {
-            //         foreach (var objective in dataManager.GetLinkedinObjectives())
-            //         {
-            //             maxProgressValue_++;
-            //         }
-            //     }
-            //         break;
-            //     case DataManager.ObjectivesTypes.CV:
-            //     {
-            //         foreach (var objective in dataManager.GetCVObjectives())
-            //         {
-            //             maxProgressValue_++;
-            //         }
-            //     }
-            //         break;
-            // }
         }
 
        public void UpdateMaxprogressValueFromValue(float value)
@@ -209,5 +210,16 @@ namespace UIScripts.UITESTS
             MaxProgressTextComponent.GetComponent<TextMeshProUGUI>().text = maxProgressValue_.ToString();
             progressBarSlider.maxValue = maxProgressValue_;
         }
+        public void IncrementProgress(float newProgress)
+        {
+            // TargetProgress = currentProgressValue_ + addedProgress;
+            // Debug.Log("target progress = " + TargetProgress);
+            // lastProgressValue_ = TargetProgress;
+            Debug.Log(newProgress);
+            TargetProgress = currentProgressValue_ + newProgress;
+            currentProgressValue_ = TargetProgress;
+
+        }
     }
+    
 }
