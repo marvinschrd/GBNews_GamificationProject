@@ -7,8 +7,10 @@ namespace UIScripts.UITESTS
     public class ProgressBarScript : MonoBehaviour
     {
         private Slider progressBarSlider;
+        [SerializeField] private Image fillImage_;
 
         [SerializeField] private float maxProgressValue_;
+        [SerializeField] private Color fillColor_;
 
         private float currentProgressValue_;
 
@@ -111,6 +113,18 @@ namespace UIScripts.UITESTS
                     }
                 }
                     break;
+                case DataManager.ObjectivesTypes.GLOBAL:
+                {
+                    foreach (var objective in dataManager.GetAllObjectives())
+                    {
+                        maxProgress++;
+                        if (objective.isDone)
+                        {
+                            currentProgress++;
+                        }
+                    }
+                }
+                    break;
             }
             
             currentProgressValue_ = currentProgress;
@@ -132,58 +146,7 @@ namespace UIScripts.UITESTS
             
             //float maxProgress = 0;
             float currentProgress = 0;
-        
-            // switch (type_)
-            // {
-            //     case DataManager.ObjectivesTypes.PITCH:
-            //     {
-            //         foreach (var objective in dataManager.GetPitchObjectives())
-            //         {
-            //             if (objective.isDone)
-            //             {
-            //                // currentProgress++;
-            //             }
-            //         }
-            //     }
-            //         break;
-            //     case DataManager.ObjectivesTypes.STARS:
-            //     {
-            //         foreach (var objective in dataManager.GetStarsObjectives())
-            //         {
-            //             if (objective.isDone)
-            //             {
-            //                 //currentProgress++;
-            //             }
-            //         }
-            //     }
-            //         break;
-            //     case DataManager.ObjectivesTypes.LINKEDIN:
-            //     {
-            //         foreach (var objective in dataManager.GetLinkedinObjectives())
-            //         {
-            //             if (objective.isDone)
-            //             {
-            //                // currentProgress++;
-            //             }
-            //         }
-            //     }
-            //         break;
-            //     case DataManager.ObjectivesTypes.CV:
-            //     {
-            //         maxProgress = dataManager.GetPitchObjectives().Count;
-            //         foreach (var objective in dataManager.GetCVObjectives())
-            //         {
-            //             if (objective.isDone)
-            //             {
-            //                 //currentProgress++;
-            //             }
-            //         }
-            //     }
-            //         break;
-            // }
             
-            // update the slider values
-           // maxProgressValue_ = maxProgress;
             currentProgressValue_ = currentProgress;
             progressBarSlider.maxValue = maxProgressValue_;
             progressBarSlider.value = currentProgressValue_;

@@ -35,6 +35,7 @@ public class MainMenuUIScript : MonoBehaviour
     private void OnEnable()
     {
        Debug.Log("main menu enabled !!!!");
+       GetComponent<Animator>().SetTrigger("Enabled");
        UpdateProgressBars();
     }
 

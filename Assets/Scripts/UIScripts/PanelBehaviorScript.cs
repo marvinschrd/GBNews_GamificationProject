@@ -29,7 +29,6 @@ public class PanelBehaviorScript : MonoBehaviour
         isEnabled_ = false;
         if (GetComponent<Animator>())
         {
-            Debug.Log("has animator and disable");
             GetComponent<Animator>().SetTrigger("Disabled");
         }
         else
@@ -49,6 +48,7 @@ public class PanelBehaviorScript : MonoBehaviour
     public void RemovePanel()
     {
        Debug.Log("Remove panel");
+      // FindObjectOfType<UIManagerScript>().SelectMenu((int)UIManagerScript.PanelsOptions.MAIN_MENU);
        gameObject.SetActive(false);
     }
 }

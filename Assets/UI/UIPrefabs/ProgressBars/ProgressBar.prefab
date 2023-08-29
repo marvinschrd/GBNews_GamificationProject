@@ -37,11 +37,11 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 280.47748, y: -400.48917}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 280.47748, y: 0}
   m_SizeDelta: {x: 533.04504, y: 85.93158}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4327642821620657869
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxProgressValue_: 0
   type_: 1
+  InitializeSelf: 0
   CategoryTitleComponent: {fileID: 2534381804268283666}
   CurrentProgressTextComponent: {fileID: 2093970908331432848}
   MaxProgressTextComponent: {fileID: 2213172396508120749}
