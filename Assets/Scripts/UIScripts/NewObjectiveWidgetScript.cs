@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NewObjectiveWidgetScript : MonoBehaviour
@@ -9,6 +11,8 @@ public class NewObjectiveWidgetScript : MonoBehaviour
     [SerializeField] private DataManager.ObjectivesTypes defaultObjectivesType_ = DataManager.ObjectivesTypes.PITCH;
 
     [SerializeField] private ObjectiveContainerScript objectiveContainer_;
+
+    [SerializeField] private Animator mainPanelAnimator_;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,12 @@ public class NewObjectiveWidgetScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnEnable()
+    {
+        // Debug.Log("New objective enable");
+        // mainPanelAnimator_.SetTrigger("EnableNewObjectivePanel");
     }
 
     public void OnTitleChanged(string title)

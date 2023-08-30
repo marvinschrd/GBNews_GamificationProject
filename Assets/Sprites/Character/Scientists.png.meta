@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f33e0bdf49a21c24ea26891cf5deb1f5
+guid: 664a8dbd41cb8a14d82651e8cdcad377
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,10 +45,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -162,34 +162,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walls_background_1
+      name: Scientists_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 92
-        width: 11
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a48cab732c0b6a449aac0b3adf94e4e2
-      internalID: 1003325416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls_background_2
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 121
-        width: 22
-        height: 3
+        x: 8
+        y: 416
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20c64efe86a59904cb4c7f8ee0468061
-      internalID: -965057552
+      spriteID: 2eeccbb6c25f87548856df479eed0582
+      internalID: -1113561033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_3
+      name: Scientists_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 80
-        width: 24
-        height: 44
+        x: 72
+        y: 416
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45ca0d5a37d987f4ca62192072d559b7
-      internalID: 1794704668
+      spriteID: 5862d9ba3446c8b4a96d491577436ee0
+      internalID: 1857469431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_4
+      name: Scientists_2
       rect:
         serializedVersion: 2
-        x: 132
-        y: 79
-        width: 8
-        height: 44
+        x: 40
+        y: 416
+        width: 16
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 559124aff5b07bb4bb5ec7ae842230d7
-      internalID: 97446625
+      spriteID: b78884ceed896734d87dc1fe5d782d16
+      internalID: 2120928693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_5
+      name: Scientists_3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 32
-        width: 4
-        height: 96
+        x: 103
+        y: 416
+        width: 16
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,20 +239,419 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 616db93d92130b84e83d139bf290c9e9
-      internalID: 1585919918
+      spriteID: 18ef73ed4ffe01e4885659a8bea999cc
+      internalID: -2104118110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_7
+      name: Scientists_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e57a7f9cdd0b446b14be29badd8f5e
+      internalID: 2059396132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4ba8b806bd37448a06c985a46b96e4
+      internalID: -610210646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_6
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2049631a3a0d89242aa3b3b52435abd0
+      internalID: -1730029991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393f3bd1426336c4f8863ff32f9d34a8
+      internalID: -2035288662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 415
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fadebb5895c694db9c151fb5cca6e1
+      internalID: -297912844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_9
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5884ace5b077d46959ccf4de853094
+      internalID: 2068725133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d083342c05795c54593561b0ea84c8ed
+      internalID: -1904175138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_11
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e6627a538ade64fa57b1446f7f69f3
+      internalID: 1371926697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_12
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07405ba9179b1b0459af1133b42db6b9
+      internalID: 1894941107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_13
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3a847361693b149afe6fbcb9d87875
+      internalID: 696053489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_14
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e7f8e3549876a42bef60f7906d9bc5
+      internalID: -359846540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_15
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 416
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5015c4286ef78ec48a281b682f7e9ce2
+      internalID: -718165051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scientists_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 480
+        width: 125
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29cb257abe288a4381691bb1474932b
+      internalID: 479873195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 480
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a892a94f9fcd243a7ecdf95480e1f8
+      internalID: 1761936535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 480
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6139edc1975e00040ba0d0f9c22f0f19
+      internalID: -82146269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_3
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 480
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a93ef78760002448a1ee380a01e463
+      internalID: 995200263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 480
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cff6b26b931cb43a8a9b8ade9c3ef7
+      internalID: 673145788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair_Scienstist_IDLE_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 352
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de32e17b52f193489f5165f8494ac64
+      internalID: 398222151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair_Scienstist_IDLE_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 352
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c1f694ea4f84240b888fc04a59b361
+      internalID: 540191272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair_Scienstist_IDLE_3
       rect:
         serializedVersion: 2
         x: 69
-        y: 85
-        width: 5
-        height: 6
+        y: 352
+        width: 21
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +659,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e83849f24660a4c4e92acb6d302f3e24
-      internalID: -605134041
+      spriteID: 6ca301336994a2c4a9e2b9c93ab79729
+      internalID: 708710937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_8
+      name: Hair_Scienstist_IDLE_4
       rect:
         serializedVersion: 2
-        x: 84
-        y: 85
-        width: 7
-        height: 6
+        x: 101
+        y: 352
+        width: 21
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +680,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4300a5dcbeae1624e98a5423ef1a0d58
-      internalID: 1352859911
+      spriteID: caf335976e0ed8a4b8c968c10a7d54bd
+      internalID: -1816704667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_9
+      name: WomenScientist_IDLE_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 42
-        width: 64
-        height: 38
+        x: 9
+        y: 224
+        width: 15
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,20 +701,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12fd0e2449e0bf148b3272f40f180201
-      internalID: 964292809
+      spriteID: c7226bed91bfca7419a4fb2b69bb4c88
+      internalID: 2095238870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_10
+      name: WomenScientist_IDLE_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 32
-        width: 24
-        height: 44
+        x: 41
+        y: 224
+        width: 15
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +722,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 644a7ef60777a6a4cb6ed29f14b7fa95
-      internalID: -2104037677
+      spriteID: fc0d86fb48486f54aa2e078f095f9d29
+      internalID: -1158397907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_11
+      name: WomenScientist_IDLE_3
       rect:
         serializedVersion: 2
-        x: 132
-        y: 32
-        width: 8
-        height: 44
+        x: 73
+        y: 224
+        width: 15
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,20 +743,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1984c99771a601143baf649beac75ac7
-      internalID: -1024535021
+      spriteID: f2cc9d30c84b919448b1e57d80212f4c
+      internalID: -1630425101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_12
+      name: WomenScientist_IDLE_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 19
+        x: 105
+        y: 224
+        width: 15
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,20 +764,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7209b5bacdc86ca45aef38d17d16492d
-      internalID: -1869792239
+      spriteID: d46cb47e6319c4c42a276212673d80b4
+      internalID: 1945322955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_0
+      name: ClassisScientist_IDLE_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 145
-        width: 48
-        height: 48
+        x: 10
+        y: 96
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,20 +785,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cdfc4a90224ded4098b3f9be2ea14e6
-      internalID: -2052584009
+      spriteID: 704850e97584f9b469c35381af3c9431
+      internalID: -845805832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_13
+      name: ClassisScientist_IDLE_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 191
-        width: 48
-        height: 49
+        x: 42
+        y: 96
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,20 +806,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a4c689eec02323458ffde3c3743947a
-      internalID: -868677230
+      spriteID: 234e640d346e8964d8772efe82ff6ef4
+      internalID: 1642793200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_6
+      name: ClassisScientist_IDLE_3
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 48
+        x: 74
+        y: 96
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,20 +827,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f415743100c5ce84caa07d8a053f1a40
-      internalID: -1363716897
+      spriteID: 571489f9ef3415a4184ca8bbbdd4b474
+      internalID: 88093057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walls_background_14
+      name: ClassisScientist_IDLE_4
       rect:
         serializedVersion: 2
-        x: 160
-        y: 79
-        width: 32
-        height: 49
+        x: 106
+        y: 96
+        width: 14
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,134 +848,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee0d46355fd4c1b40bb947225c41acb1
-      internalID: 89981454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls_background_15
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 32
-        width: 30
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b463ed4e65b701448109c5a944a1ed3
-      internalID: -537549613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls_background_16
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 32
-        width: 30
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3f2c96331a6ecf4c977806bc6fcfbcc
-      internalID: 29749354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls_background_17
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 144
-        width: 46
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18b04eafd7161df42b9a0c4400dc2ede
-      internalID: -647065574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls_background_18
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 193
-        width: 46
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c13479674cc3c6847965c0a29d350925
-      internalID: 2051907530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls_background_19
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 144
-        width: 46
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a66c0e63ff4d2b3428d504740bee92ee
-      internalID: 586432399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walls_background_20
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 101
-        width: 36
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 613e694d67919064db39afe0f9566e75
-      internalID: 1013018734
+      spriteID: f1fac5ed15d572747980b682b13e1ac0
+      internalID: -651435278
       vertices: []
       indices: 
       edges: []
@@ -613,27 +865,39 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walls_background_0: -2052584009
-      walls_background_1: 1003325416
-      walls_background_10: -2104037677
-      walls_background_11: -1024535021
-      walls_background_12: -1869792239
-      walls_background_13: -868677230
-      walls_background_14: 89981454
-      walls_background_15: -537549613
-      walls_background_16: 29749354
-      walls_background_17: -647065574
-      walls_background_18: 2051907530
-      walls_background_19: 586432399
-      walls_background_2: -965057552
-      walls_background_20: 1013018734
-      walls_background_3: 1794704668
-      walls_background_4: 97446625
-      walls_background_5: 1585919918
-      walls_background_6: -1363716897
-      walls_background_7: -605134041
-      walls_background_8: 1352859911
-      walls_background_9: 964292809
+      ClassisScientist_IDLE_1: -845805832
+      ClassisScientist_IDLE_2: 1642793200
+      ClassisScientist_IDLE_3: 88093057
+      ClassisScientist_IDLE_4: -651435278
+      Hair_Scienstist_IDLE_1: 398222151
+      Hair_Scienstist_IDLE_2: 540191272
+      Hair_Scienstist_IDLE_3: 708710937
+      Hair_Scienstist_IDLE_4: -1816704667
+      IDLE_1: 1761936535
+      IDLE_2: -82146269
+      IDLE_3: 995200263
+      IDLE_4: 673145788
+      Scientists_0: -1113561033
+      Scientists_1: 1857469431
+      Scientists_10: -1904175138
+      Scientists_11: 1371926697
+      Scientists_12: 1894941107
+      Scientists_13: 696053489
+      Scientists_14: -359846540
+      Scientists_15: -718165051
+      Scientists_16: 479873195
+      Scientists_2: 2120928693
+      Scientists_3: -2104118110
+      Scientists_4: 2059396132
+      Scientists_5: -610210646
+      Scientists_6: -1730029991
+      Scientists_7: -2035288662
+      Scientists_8: -297912844
+      Scientists_9: 2068725133
+      WomenScientist_IDLE_1: 2095238870
+      WomenScientist_IDLE_2: -1158397907
+      WomenScientist_IDLE_3: -1630425101
+      WomenScientist_IDLE_4: 1945322955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

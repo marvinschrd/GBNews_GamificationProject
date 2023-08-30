@@ -434,6 +434,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: office_13
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 32
+        width: 15
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef907bdc8f92994696428575efceed1
+      internalID: -115980533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: office_14
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 95
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdd1b4006256aa469a396cb81db6db2
+      internalID: 424353404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -450,6 +492,8 @@ TextureImporter:
       office_10: -121124778
       office_11: -1685927478
       office_12: -886344516
+      office_13: -115980533
+      office_14: 424353404
       office_2: 206561536
       office_3: -1617588949
       office_4: 1683057898

@@ -212,7 +212,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,6 +241,69 @@ TextureImporter:
       bones: []
       spriteID: 8cace447761b60c4fa8285f6147cd6f2
       internalID: -2054367107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_Flat_4
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 160
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31806295b066cb498ac92a837488486
+      internalID: -423795687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_Flat_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 288
+        width: 97
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14566ea418916054d848c903f6036b68
+      internalID: 1555246834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_Flat_6
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 32
+        width: 98
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bc5979b10183d45878950ad4047b25
+      internalID: -478403952
       vertices: []
       indices: 
       edges: []
@@ -260,6 +323,9 @@ TextureImporter:
       Spritesheet_UI_Flat_1: -1393993954
       Spritesheet_UI_Flat_2: 1340686855
       Spritesheet_UI_Flat_3: -2054367107
+      Spritesheet_UI_Flat_4: -423795687
+      Spritesheet_UI_Flat_5: 1555246834
+      Spritesheet_UI_Flat_6: -478403952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

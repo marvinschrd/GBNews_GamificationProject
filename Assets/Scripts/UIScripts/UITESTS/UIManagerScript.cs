@@ -45,6 +45,8 @@ public class UIManagerScript : MonoBehaviour
 
     [SerializeField] private Transform StarsMenuPosition;
     
+    [SerializeField] private Transform LinkedinMenuPosition;
+    
     
     //Menus reference to all the different canvas
     [SerializeField] private ObjectiveMenuScript ObjectiveMenu;
@@ -116,8 +118,9 @@ public class UIManagerScript : MonoBehaviour
             {
                 Debug.Log("Linkedin target");
                 ObjectiveMenu.UpdateUIContainers(DataManager.ObjectivesTypes.LINKEDIN);
-                // cameramovementScript.moveTo(lin.position);
-                //ToggleUIPanel(0);
+                cameramovementScript.moveTo(LinkedinMenuPosition.position);
+                ToggleUIPanel((int)PanelsOptions.STARS_UI);
+                ToggleUIPanel(0);
             }
                 break;
             case OptionsMenu.MAINMENU:
