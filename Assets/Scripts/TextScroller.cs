@@ -13,6 +13,8 @@ public class TextScroller : MonoBehaviour
 
     private bool currentTextFinishedDisplay = false;
 
+    [SerializeField] private UIManagerScript.OptionsMenu objectiveType_;
+
     [SerializeField] private TextMeshProUGUI pressSpaceMessageText_;
 
     public void ActivateText()
@@ -45,6 +47,40 @@ public class TextScroller : MonoBehaviour
     void Start()
     {
         pressSpaceMessageText_.enabled = false;
+
+        var gameDialogues = FindObjectOfType<DataManager>().GetParticipantData().GameDialogues;
+
+        //Extract the correspondig dialogue text
+        switch (objectiveType_)
+        {
+            case UIManagerScript.OptionsMenu.MAINMENU:
+            {
+                TextInfo = gameDialogues.MainMenuDialogue;
+            }
+                break;
+            case UIManagerScript.OptionsMenu.STARS:
+            {
+                TextInfo = gameDialogues.StarsMenuDialogue;
+            }
+                break;
+            case UIManagerScript.OptionsMenu.PITCH:
+            {
+                TextInfo = gameDialogues.PitchMenuDialogue;
+            }
+                break;
+            case UIManagerScript.OptionsMenu.LINKEDIN :
+            {
+                TextInfo = gameDialogues.LinkedinMenuDialogue;
+            }
+                break;
+            case UIManagerScript.OptionsMenu.CV:
+            {
+                TextInfo = gameDialogues.CVMenuDialogue;
+            }
+                break;
+        }
+        
+        
         ActivateText();
     }
 

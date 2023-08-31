@@ -46,6 +46,8 @@ public class UIManagerScript : MonoBehaviour
     [SerializeField] private Transform StarsMenuPosition;
     
     [SerializeField] private Transform LinkedinMenuPosition;
+
+    [Header("Cursor")] [SerializeField] private Texture2D CursorImage_;
     
     
     //Menus reference to all the different canvas
@@ -65,6 +67,8 @@ public class UIManagerScript : MonoBehaviour
     void Start()
     {
         cameramovementScript = FindObjectOfType<CameraMovement>();
+        
+        Cursor.SetCursor(CursorImage_,Vector2.zero, CursorMode.Auto);
       //  SelectMenu((int)initialMenu);
     }
 
