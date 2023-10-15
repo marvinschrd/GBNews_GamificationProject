@@ -455,6 +455,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WrittenText1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 37
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa0e4b2b7244a84e9ef37b030c0fc62
+      internalID: 1958758456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: writtenText2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 44
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7c2793bad0a6544a7318db13aba8d2
+      internalID: 719159267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -466,6 +508,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      WrittenText1: 1958758456
       tileset_objects_0: 1906417400
       tileset_objects_1: -2080271700
       tileset_objects_10: 1423520789
@@ -480,6 +523,7 @@ TextureImporter:
       tileset_objects_7: 1134472541
       tileset_objects_8: 1555572094
       tileset_objects_9: -1068550345
+      writtenText2: 719159267
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

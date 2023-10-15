@@ -10,9 +10,10 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
        ReloadData();
+       //LoadFirstData();
     }
 
-    private ParticipantData _participantData;
+    private ParticipantData _participantData = new ParticipantData();
     private List<ObjectiveData> AllObjectives_ = new List<ObjectiveData>();
     List<ObjectiveData> PitchObjectives = new List<ObjectiveData>();
     List<ObjectiveData> StarsObjectives= new List<ObjectiveData>();
@@ -25,7 +26,16 @@ public class DataManager : MonoBehaviour
         STARS,
         CV,
         LINKEDIN,
-        GLOBAL
+        GLOBAL,
+        PERSONNAL
+    }
+
+    private bool DataLoaded = false;
+
+    public bool GetDataLoaded()
+    {
+        return DataLoaded;
+        
     }
 
     [System.Serializable] 
@@ -71,22 +81,53 @@ public class DataManager : MonoBehaviour
         
     }
 
-    public void ReloadData()
+    public void LoadFirstData()
     {
-        var jsonFilepath = Application.persistentDataPath + "/ParticipantData.json";
+        string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        DesktopPath += "//";
+        
+        var jsonFilepath = DesktopPath + "/ParticipantData.json";
+       
         if (File.Exists(jsonFilepath))
         {
-            _participantData = DataLoader.loadJsonData();
-            AllObjectives_ = _participantData.ObjectivesData;
-            ParseObjectivesData();
-            // Debug.Log(_participantData.ObjectivesData[0].ToString());
-          
-            //InitializeProgressBars();
+             _participantData = DataLoader.loadJsonData();
         }
-        else
+        else // create file
         {
+            Debug.Log("file does not exist yet");
             File.Create(jsonFilepath);
+            //DataManager.ParticipantData newParticipantData = new DataManager.ParticipantData();
+            DataSaver.SaveDataToJson(_participantData);
+            _participantData = DataLoader.loadJsonData();
         }
+
+        DataLoaded = true;
+    }
+
+    public void ReloadData()
+    {
+        // var jsonFilepath = Application.persistentDataPath + "/ParticipantData.json";
+        // var jsonFilePath2 = Application.dataPath + "/ParticipantData.json";
+       // Debug.Log(jsonFilepath);
+
+        _participantData = DataLoader.loadJsonData();
+        AllObjectives_ = _participantData.ObjectivesData;
+        ParseObjectivesData();
+        // if (File.Exists(jsonFilepath))
+        // {
+        //     _participantData = DataLoader.loadJsonData();
+        //     AllObjectives_ = _participantData.ObjectivesData;
+        //     ParseObjectivesData();
+        // }
+        // else
+        // {
+        //     Debug.Log("create file");
+        //     File.Create(jsonFilepath);
+        //     _participantData = new ParticipantData();
+        //     DataSaver.SaveDataToJson(_participantData);
+        //     
+        //     ReloadData();
+        // }
     }
 
     void ParseObjectivesData()

@@ -1,0 +1,19 @@
+{
+    "Name": "",
+    "ObjectivesData": [
+        {
+            "type": 1,
+            "Title": "Star présentée",
+            "isDone": false,
+            "Description": "",
+            "Weight": 0
+        }
+    ],
+    "GameDialogues": {
+        "MainMenuDialogue": [],
+        "StarsMenuDialogue": [],
+        "PitchMenuDialogue": [],
+        "LinkedinMenuDialogue": [],
+        "CVMenuDialogue": []
+    }
+}

@@ -19,7 +19,8 @@ public class UIManagerScript : MonoBehaviour
         PITCH,
         STARS,
         LINKEDIN,
-        CV
+        CV,
+        PERSONNAL
     }
 
     [Serializable]

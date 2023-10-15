@@ -17,6 +17,8 @@ public class TextScroller : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI pressSpaceMessageText_;
 
+    [SerializeField] private GameObject TextBubble_;
+
     public void ActivateText()
     {
         currentTextFinishedDisplay = false;
@@ -42,6 +44,8 @@ public class TextScroller : MonoBehaviour
         {
             pressSpaceMessageText_.enabled = true;
         }
+
+        currentDisplayText++;
     }
     // Start is called before the first frame update
     void Start()
@@ -60,6 +64,7 @@ public class TextScroller : MonoBehaviour
                 break;
             case UIManagerScript.OptionsMenu.STARS:
             {
+                Debug.Log("stars type for dialogues");
                 TextInfo = gameDialogues.StarsMenuDialogue;
             }
                 break;
@@ -84,14 +89,41 @@ public class TextScroller : MonoBehaviour
         ActivateText();
     }
 
+    public void DisableText()
+    {
+        gameObject.GetComponent<Animator>().SetTrigger("DisableBubble");
+    }
+
+    void Disable()
+    {
+        gameObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && currentTextFinishedDisplay && currentDisplayText +1 < TextInfo.Length)
+        if (Input.GetKeyDown(KeyCode.Space) && currentTextFinishedDisplay && currentDisplayText < TextInfo.Length)
         {
-            Debug.Log("pressed space");
-            currentDisplayText++;
+            //currentDisplayText++;
             StartCoroutine(AnimateText());
+            Debug.Log("currentDisplayText = " + currentDisplayText);
+            Debug.Log("text info length = " + TextInfo.Length);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space)&& currentDisplayText == TextInfo.Length)
+        {
+            // call disable animation
+            DisableText();
+        }
+
+        // if (currentDisplayText + 1 == TextInfo.Length && Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     Debug.Log("end of dialogue");
+        //     if(Input.GetKeyDown(KeyCode.Space))
+        //     {
+        //         Debug.Log("disable text");
+        //         DisableText();
+        //     }
+        // }
     }
 }
